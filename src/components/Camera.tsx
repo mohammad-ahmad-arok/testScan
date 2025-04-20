@@ -10,6 +10,7 @@ const Camera: React.FC = () => {
   const [isCameraSupported, setIsCameraSupported] = useState(true);
 
   const startCamera = async () => {
+    console.log("Trying to start camera...");
     setStatus("accessing-camera");
 
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
