@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  @apply text-gray-800;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Improve video display */
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scaleX(-1); /* Mirror effect for selfie camera */
+}
+
+/* Button focus styles */
+button:focus {
+  @apply outline-none ring-2 ring-blue-300;
+}
+
+/* File input hover effect */
+input[type="file"]:hover + button {
+  @apply bg-blue-50;
+}
